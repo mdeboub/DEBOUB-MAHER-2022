@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>La Belle Vue</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style2.css"> 
+</head>
+<body>
+<!-- Navbar Start -->
+    <div class="form-container">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-043-teddy-bear"></i>
+                <span class="text-primary">La belle Vue</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+  
+
+<div class="colm-form">
+  <div><h2>Créer un nouveau Compte </h2></div>
+<form th:action="@{/Inscreption/save}" method="post" th:object="${user}">
+         <div><label> name </label></div>
+         <div><input type="text" th:field="*{name}" </div>
+         <div><label> password </label></div>
+         <div><input  type="password" th:field="*{password}"/></div>
+         <div><label> email </label></div>
+         <div><input  type="email" th:field="*{email}"/></div>
+        <div><button type="submit" >save</button> </div>
+</form>
+
+<div><h2>Si vous avez deja un compt vous pouvez connecter </h2></div>
+<form th:action="@{/Inscreption/save1}" method="post" th:object="${user}">
+
+    <div><label> email </label></div>
+    <div><input  type="email" th:field="*{email}"/></div>
+    <div><label> password </label></div>
+    <div><input  type="password" th:field="*{password}"/></div>
+
+    <div><button type="submit" >login</button> </div>
+</form>
+</div>
+    
+</body>
+</html>

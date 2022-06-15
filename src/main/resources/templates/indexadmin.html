@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!-- Head -->
+
+<head>
+    <title>La Belle Vue</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="assets/images/favicon.png">
+    <!-- Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Components Vendor Styles -->
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/styleadmin.css">
+
+    <!-- Custom Charts -->
+    <style>
+        .js-doughnut-chart {
+            width: 70px !important;
+            height: 70px !important;
+        }
+    </style>
+</head>
+<!-- End Head -->
+
+<body>
+
+    <!-- Header (Topbar) -->
+    <header class="u-header">
+    <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href="indexadmin" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-043-teddy-bear"></i>
+                <span class="text-primary">La belle Vue</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+        <div class="u-header-left">
+            <a class="u-header-logo" href="indexadmin">
+                
+                
+            </a>
+        </div>
+
+        <div class="u-header-middle">
+            <a class="js-sidebar-invoker u-sidebar-invoker text-danger" href="#!" data-is-close-all-except-this="true" data-target="#sidebar">
+                <i class="fa fa-bars u-sidebar-invoker__icon--open"></i>
+                <i class="fa fa-times u-sidebar-invoker__icon--close"></i>
+            </a>
+
+            <div class="u-header-search" data-search-mobile-invoker="#headerSearchMobileInvoker" data-search-target="#headerSearch">
+                <a id="headerSearchMobileInvoker" class="btn btn-link input-group-prepend u-header-search__mobile-invoker" href="#!">
+                   
+                </a>
+            </div>
+        </div>
+
+            <!-- User Profile -->
+            <div class="dropdown ml-2">
+                <a class="link-muted d-flex align-items-center us-u-avatar-wrap" href="#!" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                    <img class="u-avatar--xs img-fluid rounded-circle mr-2 bg-gradient" src="assets/img/avatars/img1.png" alt="User Profile">
+                    <span class="d-none d-sm-inline-block text-danger">
+                        <small class="fas fa-ellipsis-v"></small>
+                    </span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right border-0 py-0 mt-3" aria-labelledby="dropdownMenuLink" style="width: 260px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-4">
+                                    <a class="d-flex align-items-center link-dark" href="#!">
+                                        <span class="h3 mb-0"><i class="far fa-user-circle text-muted mr-3"></i></span> View Profile
+                                    </a>
+                                </li>
+                                <li class="mb-4">
+                                    <a class="d-flex align-items-center link-dark" href="#!">
+                                        <span class="h3 mb-0"><i class="far fa-list-alt text-muted mr-3"></i></span> Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex align-items-center link-dark" href="#!">
+                                        <span class="h3 mb-0"><i class="far fa-share-square text-muted mr-3"></i></span> Sign Out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End User Profile -->
+        </div>
+    </header>
+    <!-- End Header (Topbar) -->
+
+    <main class="u-main" role="main">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="u-sidebar">
+            <div class="u-sidebar-inner bg-gradient bdrs-30">
+                <header class="u-sidebar-header">
+                    <a class="u-sidebar-logo" href="index.html">
+                        <img class="img-fluid" src="assets/img/logo.png" width="124" alt="Stream Dashboard">
+                    </a>
+                </header>
+
+                <nav class="u-sidebar-nav">
+                    <ul class="u-sidebar-nav-menu u-sidebar-nav-menu--top-level">
+                        <!-- Dashboard -->
+                        <li class="u-sidebar-nav-menu__item">
+                            <a class="u-sidebar-nav-menu__link active" href="indexadmin">
+                                <i class="fas fa-tachometer-alt u-sidebar-nav-menu__item-icon"></i>
+                                <span class="u-sidebar-nav-menu__item-title">Accueil</span>
+                            </a>
+                        </li>
+                        <!-- End Dashboard -->
+                        <!-- Questions -->
+                        <li class="u-sidebar-nav-menu__item">
+                            <a class="u-sidebar-nav-menu__link" href="ContactReceive">
+                                        <span class="u-sidebar-nav-menu__item-title">Contact</span>
+                                    </a>
+                        </li>
+                        <!-- End Questions -->
+                        
+                        <!-- Inscription -->
+                        <li class="u-sidebar-nav-menu__item">
+                            <a class="u-sidebar-nav-menu__link" href="InscriptionReceive">
+                                        <span class="u-sidebar-nav-menu__item-title">Inscription</span>
+                                    </a>
+                        </li>
+                        <!-- End Inscription -->
+
+                         <!-- Educatrice -->
+                        <li class="u-sidebar-nav-menu__item">
+                            <a class="u-sidebar-nav-menu__link" href="employee">
+                                        <span class="u-sidebar-nav-menu__item-title">Eductrice</span>
+                                    </a>
+                        </li>
+                        <!-- End Educatrice -->
+                        
+                        <!-- Facture -->
+                        <li class="u-sidebar-nav-menu__item">
+                            <a class="u-sidebar-nav-menu__link" href="indexfac">
+                                        <span class="u-sidebar-nav-menu__item-title">Facture</span>
+                                    </a>
+                        </li>
+                        <!-- End Facture -->
+
+                        
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- End Sidebar -->
+        
+        
+
+        <div class="u-content">
+            <div class="u-body">
+
+                <!-- breadcumb-area -->
+                <section class="breadcumb-area card bg-gradient mb-5">
+                    <div class="bread-cumb-content card-body d-flex align-items-center">
+                        <div class="breadcumb-heading">
+                            <h2 class="text-white">Bienvenue</h2>
+                        </div>
+                        <div class="breadcumb-image ml-auto">
+                            <img src="assets/img/breadcumb-dashboard.png" alt="">
+                        </div>
+                    </div>
+                </section>
+                <!-- End breadcumb-area -->
+                    
+                </div>
+                <!-- End Deal Overview -->
+
+                <!-- highlight-area start -->
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-asset-counting-list-box bg-gradient bg-gradient-purple card border-0 text-center">
+                            <div class="card-body">
+                                <div class="single-asset-counting-list-image-wrap">
+                                    <img src="assets/img/student.png" alt="">
+                                </div>
+                                <h2 class="text-white mb-0">XX <small class="d-block mt-2">enfants</small></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-asset-counting-list-box bg-gradient bg-gradient-blue card border-0 text-center">
+                            <div class="card-body">
+                                <div class="single-asset-counting-list-image-wrap">
+                                    <img src="assets/img/teacher.png" alt="">
+                                </div>
+                                <h2 class="text-white mb-0">XX <small class="d-block mt-2">educatrices</small></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-asset-counting-list-box bg-gradient bg-gradient-green card border-0 text-center">
+                            <div class="card-body">
+                                <div class="single-asset-counting-list-image-wrap">
+                                    <img src="assets/img/parent.png" alt="">
+                                </div>
+                                <h2 class="text-white mb-0">XX <small class="d-block mt-2">Parents</small></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-asset-counting-list-box bg-gradient bg-gradient-yellow card border-0 text-center">
+                            <div class="card-body">
+                                <div class="single-asset-counting-list-image-wrap">
+                                    <img src="assets/img/staff.png" alt="">
+                                </div>
+                                <h2 class="text-white mb-0">1 <small class="d-block mt-2">Staff</small></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- highlight-area End -->
+            </div>
+
+            
+        </div>
+    </main>
+
+    <!-- Global Vendor -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Initialization  -->
+    <script src="assets/js/sidebar-nav.js"></script>
+    <script src="assets/js/mainadmin.js"></script>
+    <script src="assets/js/dashboard-page-scripts.js"></script>
+    <!--<script src="assets/js/scripts.js"></script>-->
+</body>
+</html>
